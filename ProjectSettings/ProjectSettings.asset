@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 23
-  productGUID: fc81985611409074bb58451b8a80c9ff
+  productGUID: c6bd0e965db9dda40930b8db9c5d0e4c
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -878,7 +878,7 @@ PlayerSettings:
   cloudProjectId: 6295b784-34f6-458d-8832-81e56fc16b14
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Twin Twirl (2)
+  projectName: 
   organizationId: gyann-technologies
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1
