@@ -63,9 +63,9 @@ namespace SpinDots
             Application.OpenURL(AppInfo.Instance.FACEBOOK_LINK);
         }
 
-        public static void OpenTwitterPage()
+        public static void OpenInstagramPage()
         {
-            Application.OpenURL(AppInfo.Instance.TWITTER_LINK);
+            Application.OpenURL(AppInfo.Instance.INSTAGRAM_LINK);
         }
 
         public static void ContactUs()

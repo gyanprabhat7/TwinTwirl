@@ -14,8 +14,8 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.58120227, g: 0.25663045, b: 0.745283, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -26,8 +26,8 @@ RenderSettings:
   m_AmbientIntensity: 1.2
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 83293e440e9e0484c91cf51a4303bef8, type: 2}
-  m_HaloStrength: 0.5
+  m_SkyboxMaterial: {fileID: 2100000, guid: 1cf6f4c6e6e0518419839d3f5448dd99, type: 2}
+  m_HaloStrength: 0.546
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1366896626}
-  m_IndirectSpecularColor: {r: 0.15030149, g: 0.17423847, b: 0.18213567, a: 1}
+  m_IndirectSpecularColor: {r: 0.07959515, g: 0.0996635, b: 0.30057466, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1232,7 +1232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.60784316, b: 0.49019608, a: 1}
+  m_Color: {r: 0.39607844, g: 0.15294118, b: 0.74509805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1617,7 +1617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.60784316, b: 0.49019608, a: 1}
+  m_Color: {r: 0.39607844, g: 0.15294118, b: 0.74509805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1685,6 +1685,11 @@ PrefabInstance:
     - target: {fileID: 4065427342994058, guid: 2f0bdda1d46b64c4b8eb2503536d16e6, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114675356610047132, guid: 2f0bdda1d46b64c4b8eb2503536d16e6,
+        type: 3}
+      propertyPath: distanceBetweenTwoObstacles
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f0bdda1d46b64c4b8eb2503536d16e6, type: 3}
@@ -2834,7 +2839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 28fa3274a8d824a50bc9f10e88400238, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9e1d8cea91cf58c4bb780db5c48b4d4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3210,7 +3215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.78431374, b: 0.64705884, a: 1}
+  m_Color: {r: 0.5882353, g: 0.5058824, b: 0.92156863, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3782,8 +3787,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 218131795}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OpenTwitterPage
+        m_TargetAssemblyTypeName: SpinDots.UIManager, Assembly-CSharp
+        m_MethodName: OpenInstagramPage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3807,7 +3812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.60784316, b: 0.49019608, a: 1}
+  m_Color: {r: 0.39607844, g: 0.15294118, b: 0.74509805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4073,7 +4078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0.56470585, b: 0.75, a: 0.5882353}
+  m_EffectColor: {r: 0.40213785, g: 0.3499911, b: 0.6132076, a: 0.5882353}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
 --- !u!114 &611558132
@@ -4104,7 +4109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.751724, b: 1, a: 1}
+  m_Color: {r: 0.5882353, g: 0.5058824, b: 0.92156863, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4413,7 +4418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0.43529412, b: 0.3529412, a: 1}
+  m_EffectColor: {r: 0.34814405, g: 0.27100393, b: 0.6603774, a: 1}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
 --- !u!114 &636882127
@@ -4430,7 +4435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.78431374, b: 0.64705884, a: 1}
+  m_Color: {r: 0.5882353, g: 0.5058824, b: 0.92156863, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4692,7 +4697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.60784316, b: 0.49019608, a: 1}
+  m_Color: {r: 0.39607844, g: 0.15294118, b: 0.74509805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4843,7 +4848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.60784316, b: 0.49019608, a: 1}
+  m_Color: {r: 0.39607844, g: 0.15294118, b: 0.74509805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5425,6 +5430,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.696248
       objectReference: {fileID: 0}
+    - target: {fileID: 11496204, guid: 87d32f82f7fb6405d929088046ec6ecb, type: 3}
+      propertyPath: APP_NAME
+      value: Twin Twirl
+      objectReference: {fileID: 0}
+    - target: {fileID: 11496204, guid: 87d32f82f7fb6405d929088046ec6ecb, type: 3}
+      propertyPath: TWITTER_NAME
+      value: epictioninteractive
+      objectReference: {fileID: 0}
+    - target: {fileID: 11496204, guid: 87d32f82f7fb6405d929088046ec6ecb, type: 3}
+      propertyPath: SUPPORT_EMAIL
+      value: forms.epiction@outlook.com
+      objectReference: {fileID: 0}
+    - target: {fileID: 11496204, guid: 87d32f82f7fb6405d929088046ec6ecb, type: 3}
+      propertyPath: INSTAGRAM_NAME
+      value: epictioninteractive
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87d32f82f7fb6405d929088046ec6ecb, type: 3}
 --- !u!1 &871705952
@@ -5712,7 +5733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.60784316, b: 0.49019608, a: 1}
+  m_Color: {r: 0.39607844, g: 0.15294118, b: 0.74509805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5973,15 +5994,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224578450197189602, guid: eb75309886f28435eb2eb72850cc845f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 536.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224578450197189602, guid: eb75309886f28435eb2eb72850cc845f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 127.2
+      objectReference: {fileID: 0}
     - target: {fileID: 224967028312026512, guid: eb75309886f28435eb2eb72850cc845f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 270
+      value: 231.6
       objectReference: {fileID: 0}
     - target: {fileID: 224967028312026512, guid: eb75309886f28435eb2eb72850cc845f,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 540
+      value: 404.2
       objectReference: {fileID: 0}
     - target: {fileID: 224967028312026512, guid: eb75309886f28435eb2eb72850cc845f,
         type: 3}
@@ -5996,12 +6027,12 @@ PrefabInstance:
     - target: {fileID: 224967028312026512, guid: eb75309886f28435eb2eb72850cc845f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 55
+      value: 65.7
       objectReference: {fileID: 0}
     - target: {fileID: 224967028312026512, guid: eb75309886f28435eb2eb72850cc845f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 80
+      value: 30.3
       objectReference: {fileID: 0}
     - target: {fileID: 224967028312026512, guid: eb75309886f28435eb2eb72850cc845f,
         type: 3}
@@ -7008,7 +7039,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 376}
+  m_AnchoredPosition: {x: 0, y: 357.8}
   m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1257205420
@@ -7376,7 +7407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0.5588235, b: 0.46102944, a: 1}
+  m_EffectColor: {r: 0.4557219, g: 0.40049842, b: 0.6792453, a: 1}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
 --- !u!114 &1318058501
@@ -7393,7 +7424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.78431374, b: 0.64705884, a: 1}
+  m_Color: {r: 0.5882353, g: 0.5058824, b: 0.92156863, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7960,7 +7991,7 @@ GameObject:
   - component: {fileID: 1377316299}
   - component: {fileID: 1377316298}
   m_Layer: 5
-  m_Name: Twitter
+  m_Name: Instagram
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8576,7 +8607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.96862745, b: 0, a: 1}
+  m_Color: {r: 0.5882353, g: 0.5058824, b: 0.92156863, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8585,7 +8616,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 313745fe671d5464aa064ae7519e7f24, type: 3}
-    m_FontSize: 70
+    m_FontSize: 65
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -10253,7 +10284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.60784316, b: 0.49019608, a: 1}
+  m_Color: {r: 0.39607844, g: 0.15294118, b: 0.74509805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10309,7 +10340,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
+  m_BackGroundColor: {r: 0.8113208, g: 0.8074938, b: 0.8074938, a: 0.019607844}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -10622,7 +10653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5882353, g: 0.5058824, b: 0.92156863, a: 1}
+  m_Color: {r: 0.7019608, g: 0.5058824, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10630,8 +10661,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 313745fe671d5464aa064ae7519e7f24, type: 3}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: dc352059e8e94fe4e9a805b7c4ab9d4b, type: 3}
+    m_FontSize: 94
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1

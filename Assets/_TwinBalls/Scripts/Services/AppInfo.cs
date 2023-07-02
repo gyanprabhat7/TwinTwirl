@@ -41,7 +41,7 @@ namespace SpinDots
 
         public string FACEBOOK_ID = "[YOUR_FACEBOOK_PAGE_ID]";
 
-        public string TWITTER_NAME = "[YOUR_TWITTER_PAGE_NAME]";
+        public string INSTAGRAM_NAME = "[YOUR_INSTA_PAGE_NAME]";
 
         public string SUPPORT_EMAIL = "[YOUR_SUPPORT_EMAIL]";
 
@@ -49,7 +49,7 @@ namespace SpinDots
         public string FACEBOOK_LINK = "https://facebook.com/";
 
         [HideInInspector]
-        public string TWITTER_LINK = "https://twitter.com/";
+        public string INSTAGRAM_LINK = "https://instagram.com/";
 
         void Awake()
         {
@@ -71,7 +71,7 @@ namespace SpinDots
             APPSTORE_SHARE_LINK += APPSTORE_ID;
             PLAYSTORE_SHARE_LINK += BUNDLE_ID;
             FACEBOOK_LINK += FACEBOOK_ID;
-            TWITTER_LINK += TWITTER_NAME;
+            INSTAGRAM_LINK += INSTAGRAM_NAME;
         }
     }
 }

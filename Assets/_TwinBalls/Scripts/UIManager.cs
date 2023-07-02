@@ -416,9 +416,9 @@ namespace SpinDots
             Utilities.RateApp();
         }
 
-        public void OpenTwitterPage()
+        public void OpenInstagramPage()
         {
-            Utilities.OpenTwitterPage();
+            Utilities.OpenInstagramPage();
         }
 
         public void OpenFacebookPage()
