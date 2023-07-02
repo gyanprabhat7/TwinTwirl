@@ -1476,7 +1476,7 @@ MonoBehaviour:
   restorePurchaseBtn: {fileID: 1921197964}
   storeUI: {fileID: 1372011434}
   shareUI: {fileID: 996312311}
-  shareUIController: {fileID: 996312310}
+  shareUIController: {fileID: 0}
 --- !u!4 &218131796
 Transform:
   m_ObjectHideFlags: 0
@@ -6041,18 +6041,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb75309886f28435eb2eb72850cc845f, type: 3}
---- !u!114 &996312310 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114313855331922448, guid: eb75309886f28435eb2eb72850cc845f,
-    type: 3}
-  m_PrefabInstance: {fileID: 996312309}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47178792d8b0a4f088e0f91f362c793f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &996312311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1684210284427676, guid: eb75309886f28435eb2eb72850cc845f,
@@ -9933,7 +9921,11 @@ PrefabInstance:
     - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
       propertyPath: jump.clip
       value: 
-      objectReference: {fileID: 8300000, guid: a0a4a89d132d73b4b87fee5f94a4679f, type: 3}
+      objectReference: {fileID: 8300000, guid: edd92315094de8f4782d30675974d309, type: 3}
+    - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
+      propertyPath: gameOver.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a195b6524e2424b26ba7964268e53bf8, type: 3}
     - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
       propertyPath: background.clip
       value: 

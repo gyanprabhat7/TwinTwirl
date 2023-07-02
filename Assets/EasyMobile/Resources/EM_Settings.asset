@@ -337,6 +337,33 @@ MonoBehaviour:
       mValue: '[Your usage description]'
     - mKey: NSPhotoLibraryAddUsageDescription
       mValue: '[Your usage description]'
+  mNativeApisSettings:
+    mIsMediaEnabled: 0
+    mMediaSettings:
+      mAndroidPermissions:
+      - mElementName: uses-permission
+        mValue: android.permission.WRITE_EXTERNAL_STORAGE
+      - mElementName: uses-feature
+        mValue: android.hardware.camera
+      mIOSInfoPlistKeys:
+      - mKey: NSPhotoLibraryUsageDescription
+        mValue: '[Your usage description]'
+      - mKey: NSPhotoLibraryAddUsageDescription
+        mValue: '[Your usage description]'
+      - mKey: NSCameraUsageDescription
+        mValue: '[Your usage description]'
+      - mKey: NSMicrophoneUsageDescription
+        mValue: '[Your usage description]'
+    mIsContactsEnabled: 0
+    mContactsSettings:
+      mAndroidPermissions:
+      - mElementName: uses-permission
+        mValue: android.permission.WRITE_CONTACTS
+      - mElementName: uses-permission
+        mValue: android.permission.READ_CONTACTS
+      mIOSInfoPlistKeys:
+      - mKey: NSContactsUsageDescription
+        mValue: '[Your usage description]'
   mRuntimeAutoInitialization: 1
   mIsAdModuleEnable: 0
   mIsIAPModuleEnable: 0
