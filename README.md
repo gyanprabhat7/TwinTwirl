@@ -18,8 +18,7 @@ Twin Twirl is an casual mobile game in which player needs to navigate two twin b
 <img src="https://github.com/gyanprabhat7/TwinTwirl/assets/75989086/3bce19d8-17ca-4011-8a96-1bed1c8483ff"  width="200" height="400">
 <img src="https://github.com/gyanprabhat7/TwinTwirl/assets/75989086/13ab5cc4-3a27-4424-bade-62425a875980"  width="200" height="400">
 <img src="https://github.com/gyanprabhat7/TwinTwirl/assets/75989086/df376be7-8f2e-4f1c-85da-875c6c2e6075"  width="200" height="400">
-<img src="https://github.com/gyanprabhat7/TwinTwirl/assets/75989086/3d68ed32-f40f-42d3-b1ac-61a39519f0ae"  width="200" height="400">
-<img src="https://github.com/gyanprabhat7/TwinTwirl/assets/75989086/7cb24c7b-ea9b-4a08-8fa7-b513b287c157"  width="200" height="400">
+
 
 
 ## Left to-do
