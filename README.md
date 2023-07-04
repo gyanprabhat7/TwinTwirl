@@ -15,6 +15,7 @@ Twin Twirl is an casual mobile game in which player needs to navigate two twin b
 
 ## Developers
 
+- [Epiction Interactive](https://epiction.pages.dev/)
 - [@gyanprabhat](https://www.github.com/gyanprabhat7)
 - @SgLib Games
 - Random guys helping and fixing errors on internet :)
