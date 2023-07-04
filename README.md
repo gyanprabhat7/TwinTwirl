@@ -1,12 +1,25 @@
-# Twin Twirl
+# Twin Twirl 
+<p align="center">
+  <img src="https://github.com/gyanprabhat7/TwinTwirl/assets/75989086/c3ae3923-5ace-4f3f-947c-7c95cb7c466f" width="200" height="200">
+</p>
+
 
 Twin Twirl is an casual mobile game in which player needs to navigate two twin balls through randomizing obstacles in the space. The player control is as simple as it can get, player just needs to tap on screen to apply forced physics to twin balls to dodge the obstacle. Although it sounds very easy and simple but its not, player will need to understand game physics on his own and develop his very own playing syle. The game is endless and if player dies then he/she have to restart giving this game a very addictive nature.
+
+## Beta testing is now open
+  
+<div align="center">
+  <a href="https://drive.google.com/uc?export=download&id=1CLqB--6GlkeuriDYyx-Skdr2rfqPo5NN">
+    <img src="https://i.ibb.co/WsF8X02/DOWNLOAD-BETA-RELEASE.png" alt="Download" />
+  </a>
+</div>
 
 
 
 
 ## Developers
 
+- [Epiction Interactive](https://epiction.pages.dev/)
 - [@gyanprabhat](https://www.github.com/gyanprabhat7)
 - @SgLib Games
 - Random guys helping and fixing errors on internet :)
@@ -68,4 +81,9 @@ Shoot a 30 sec fast phased trailer for this game.
  - [Stackoverflow](https://stackoverflow.com/)
  
 
-© 2023 Epiction Interactive.
+<div align="center">
+  <h3>© 2023 Epiction Interactive.</h3>
+  <a herf="https://epiction.pages.dev/"
+    <img src="https://github.com/gyanprabhat7/TwinTwirl/assets/75989086/2b8da57c-73bb-4469-b6b1-a30de1d86102" alt="Epiction-logo" />
+  </a>
+</div>
