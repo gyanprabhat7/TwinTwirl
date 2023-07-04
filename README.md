@@ -56,7 +56,7 @@ We need a good logo for our game to stand out in the store.
 <details>
 <summary>Trailer</summary>
 <br>
-Shoot a 30 sec fat phased trailer for this game.
+Shoot a 30 sec fast phased trailer for this game.
 </details>
 
 ## Acknowledgements
