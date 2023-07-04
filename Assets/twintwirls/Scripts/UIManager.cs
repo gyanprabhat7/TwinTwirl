@@ -45,9 +45,7 @@ namespace SpinDots
         [Header("In-App Purchase Store")]
         public GameObject storeUI;
 
-        [Header("Sharing-Specific")]
-        public GameObject shareUI;
-        public ShareUIController shareUIController;
+        
 
         Animator scoreAnimator;
         Animator dailyRewardAnimator;
@@ -148,7 +146,7 @@ namespace SpinDots
             // Hidden by default
             storeUI.SetActive(false);
             settingsUI.SetActive(false);
-            shareUI.SetActive(false);
+            
 
             // These premium feature buttons are hidden by default
             // and shown when certain criteria are met (e.g. rewarded ad is loaded)
@@ -218,7 +216,7 @@ namespace SpinDots
             // Show these if premium features are enabled (and relevant conditions are met)
             if (IsPremiumFeaturesEnabled())
             {
-                ShowShareUI();
+                
                 ShowWatchForCoinsBtn();
             }
         }
@@ -380,26 +378,9 @@ namespace SpinDots
 #endif
         }
 
-        public void ShowShareUI()
-        {
-            if (!ScreenshotSharer.Instance.disableSharing)
-            {
-                Texture2D texture = ScreenshotSharer.Instance.CapturedScreenshot;
-                shareUIController.ImgTex = texture;
+       
 
-#if EASY_MOBILE
-                AnimatedClip clip = ScreenshotSharer.Instance.RecordedClip;
-                shareUIController.AnimClip = clip;
-#endif
-
-                shareUI.SetActive(true);
-            }
-        }
-
-        public void HideShareUI()
-        {
-            shareUI.SetActive(false);
-        }
+        
 
         public void ToggleSound()
         {
