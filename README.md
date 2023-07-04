@@ -27,25 +27,40 @@ Twin Twirl is an casual mobile game in which player needs to navigate two twin b
 
 ## Left to-do
 
-- Ads Setup (Mediation)
-- IAP Setup
-- Google Play Games Setup (Leaderboard and Achievements)
-
 <details>
-<summary>How do I dropdown?</summary>
+<summary>Ads Setup</summary>
 <br>
-This is how you dropdown.
+Setup Ads for monetization. Google AdMob preferred with mediation.
 </details>
 
+<details>
+<summary>IAP Setup</summary>
+<br>
+Setup IAP - In app purchases for game store where user can buy coins to purchase in game characters (Balls) and also Remove ads & Restore purchase.
+</details>
+
+<details>
+<summary>Google Play Games Setup</summary>
+<br>
+Setup Google play games for Leaderboard and Achievements.
+</details>
   
-- Add more integrations
-- Better SFX (Optional)
-- Logo
+<details>
+<summary>Better SFX</summary>
+<br>
+Thus one is totally at the botton of the list cause the sounds in game are awesomne except for dying sfx.
+</details>
 
-## Used By
+<details>
+<summary>logo</summary>
+<br>
+We need a good logo for our game to stand out in the store.
+</details>
 
-This project is used by the following companies:
+<details>
+<summary>Trailer</summary>
+<br>
+Shoot a 30 sec fat phased trailer for this game.
+</details>
 
-- Company 1
-- Company 2
-
+© 2023 Epiction Interactive.
