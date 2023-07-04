@@ -1,4 +1,4 @@
-
+<div align="center">
 # Twin Twirl 
 <p align="center">
   <img src="https://github.com/gyanprabhat7/TwinTwirl/assets/75989086/c3ae3923-5ace-4f3f-947c-7c95cb7c466f" width="200" height="200">
@@ -87,5 +87,7 @@ Shoot a 30 sec fast phased trailer for this game.
   <a herf="https://epiction.pages.dev/"
     <img src="https://github.com/gyanprabhat7/TwinTwirl/assets/75989086/2b8da57c-73bb-4469-b6b1-a30de1d86102" alt="Epiction-logo" />
   </a>
+</div>
+
 </div>
 
