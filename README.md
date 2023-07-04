@@ -1,8 +1,6 @@
 # Twin Twirl 
+![TWIN Twirl](https://github.com/gyanprabhat7/TwinTwirl/assets/75989086/c3ae3923-5ace-4f3f-947c-7c95cb7c466f)
 
-<p align="center">
-  <img src="https://i.postimg.cc/QMSVSTQ2/TWIN-Twirl.png" alt="Logo" width="200" height="200" />
-</p>
 
 Twin Twirl is an casual mobile game in which player needs to navigate two twin balls through randomizing obstacles in the space. The player control is as simple as it can get, player just needs to tap on screen to apply forced physics to twin balls to dodge the obstacle. Although it sounds very easy and simple but its not, player will need to understand game physics on his own and develop his very own playing syle. The game is endless and if player dies then he/she have to restart giving this game a very addictive nature.
 
