@@ -1,3 +1,4 @@
+
 # Twin Twirl 
 ![TWIN Twirl](https://github.com/gyanprabhat7/TwinTwirl/assets/75989086/c3ae3923-5ace-4f3f-947c-7c95cb7c466f)
 
@@ -79,4 +80,5 @@ Shoot a 30 sec fast phased trailer for this game.
  - [Stackoverflow](https://stackoverflow.com/)
  
 
-© 2023 Epiction Interactive.
+### © 2023 Epiction Interactive.
+![Epiction-logo](https://github.com/gyanprabhat7/TwinTwirl/assets/75989086/2b8da57c-73bb-4469-b6b1-a30de1d86102)
