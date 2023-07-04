@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1366896626}
-  m_IndirectSpecularColor: {r: 0.07959515, g: 0.0996635, b: 0.30057466, a: 1}
+  m_IndirectSpecularColor: {r: 0.15012258, g: 0.1566335, b: 0.31602907, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3445,7 +3445,7 @@ RectTransform:
   m_GameObject: {fileID: 497489784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1351805431}
@@ -4050,7 +4050,7 @@ RectTransform:
   m_GameObject: {fileID: 611558129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 209648654}
@@ -4387,7 +4387,7 @@ RectTransform:
   m_GameObject: {fileID: 636882124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.78, y: 0.78, z: 0.78}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1388940751}
@@ -7148,7 +7148,7 @@ RectTransform:
   m_GameObject: {fileID: 1311121414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1588084730}
@@ -7370,7 +7370,7 @@ RectTransform:
   m_GameObject: {fileID: 1318058498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.78, y: 0.78, z: 0.78}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1510927150}
@@ -8604,7 +8604,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 313745fe671d5464aa064ae7519e7f24, type: 3}
-    m_FontSize: 65
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -9921,15 +9921,32 @@ PrefabInstance:
     - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
       propertyPath: jump.clip
       value: 
-      objectReference: {fileID: 8300000, guid: edd92315094de8f4782d30675974d309, type: 3}
+      objectReference: {fileID: 8300000, guid: e4d6dd5b700a56e4b893b1f5412e6669, type: 3}
+    - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
+      propertyPath: button.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 885877497c50a964db3e7cc54ff6069d, type: 3}
+    - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
+      propertyPath: unlock.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e7fc0acea3926b14d9452e2788896db8, type: 3}
     - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
       propertyPath: gameOver.clip
       value: 
-      objectReference: {fileID: 8300000, guid: a195b6524e2424b26ba7964268e53bf8, type: 3}
+      objectReference: {fileID: 8300000, guid: 1bcaa53b45a21fb4c8bef32891d8cd00, type: 3}
+    - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
+      propertyPath: rewarded.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ee3d1304a79c29849a8b22228cebff46, type: 3}
     - target: {fileID: 11496382, guid: 393e1012855d44eb08111c95269092e0, type: 3}
       propertyPath: background.clip
       value: 
-      objectReference: {fileID: 8300000, guid: b5d2eb5fc12c41341a44cc04feecc801, type: 3}
+      objectReference: {fileID: 8300000, guid: 2564f6359bf55dd4a80c2c449c07c1e3, type: 3}
+    - target: {fileID: 82174746080215346, guid: 393e1012855d44eb08111c95269092e0,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.796
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 393e1012855d44eb08111c95269092e0, type: 3}
 --- !u!1 &1672609930
