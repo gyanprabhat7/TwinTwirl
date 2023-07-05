@@ -9,7 +9,7 @@ namespace SpinDots
 {
     public class AdDisplayer : MonoBehaviour
     {
-        
+
 
         public enum BannerAdPos
         {
@@ -50,12 +50,12 @@ namespace SpinDots
             }
         }
 
-        #if EASY_MOBILE
+#if EASY_MOBILE
         public static event System.Action CompleteRewardedAdToRecoverLostGame;
         public static event System.Action CompleteRewardedAdToEarnCoins;
 
         private static int gameCount = 0;
-        
+
         void OnEnable()
         {
             GameManager.GameStateChanged += OnGameStateChanged;
@@ -76,7 +76,7 @@ namespace SpinDots
         }
 
         void OnGameStateChanged(GameState newState, GameState oldState)
-        {       
+        {
             if (newState == GameState.GameOver)
             {
                 // Show interstitial ad
@@ -100,7 +100,7 @@ namespace SpinDots
         }
 
         IEnumerator ShowInterstitial(float delay = 0f)
-        {        
+        {
             if (delay > 0)
                 yield return new WaitForSeconds(delay);
 
@@ -153,6 +153,6 @@ namespace SpinDots
                 CompleteRewardedAdToEarnCoins();
             }
         }
-        #endif
+#endif
     }
 }
