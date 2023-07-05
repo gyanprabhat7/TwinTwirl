@@ -40,11 +40,12 @@ namespace SpinDots
         public GameObject shareBtn;
         public GameObject iapPurchaseBtn;
         public GameObject removeAdsBtn;
-        public GameObject restorePurchaseBtn;
 
-        [Header("In-App Purchase Store")]
-        public GameObject storeUI;
+        [Header("Custom Buttons")]
+        public string Url;
+       
 
+       
         
 
         Animator scoreAnimator;
@@ -139,13 +140,11 @@ namespace SpinDots
             bool enablePremium = IsPremiumFeaturesEnabled();
             leaderboardBtn.SetActive(enablePremium);
             shareBtn.SetActive(enablePremium);
-            iapPurchaseBtn.SetActive(enablePremium);
+            
             removeAdsBtn.SetActive(enablePremium);
-            restorePurchaseBtn.SetActive(enablePremium);
+           
 
-            // Hidden by default
-            storeUI.SetActive(false);
-            settingsUI.SetActive(false);
+            
             
 
             // These premium feature buttons are hidden by default
@@ -256,15 +255,9 @@ namespace SpinDots
             settingsUI.SetActive(false);
         }
 
-        public void ShowStoreUI()
-        {
-            storeUI.SetActive(true);
-        }
+       
 
-        public void HideStoreUI()
-        {
-            storeUI.SetActive(false);
-        }
+       
 
         public void ShowCharacterSelectionScene()
         {
@@ -443,6 +436,11 @@ namespace SpinDots
         bool IsPremiumFeaturesEnabled()
         {
             return PremiumFeaturesManager.Instance != null && PremiumFeaturesManager.Instance.enablePremiumFeatures;
+        }
+
+        public void openEpictionWebsite()
+        {
+            Application.OpenURL(Url);
         }
     }
 }

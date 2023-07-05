@@ -366,9 +366,9 @@ MonoBehaviour:
         mValue: '[Your usage description]'
   mRuntimeAutoInitialization: 1
   mIsAdModuleEnable: 1
-  mIsIAPModuleEnable: 1
-  mIsGameServiceModuleEnable: 0
+  mIsIAPModuleEnable: 0
+  mIsGameServiceModuleEnable: 1
   mIsNotificationModuleEnable: 0
   mIsSharingModuleEnable: 0
-  mActiveModuleIndex: 3
+  mActiveModuleIndex: 1
   mIsSelectingModule: 0

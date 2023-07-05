@@ -381,7 +381,7 @@ namespace EasyMobile
             return false;
 #endif
         }
-        
+
         /// <summary>
         /// Determines whether the product with the specified id is owned.
         /// A product is consider owned if it has a receipt. If receipt validation
@@ -403,7 +403,7 @@ namespace EasyMobile
             return false;
 #endif
         }
-        
+
         /// <summary>
         /// Determines whether the product is owned.
         /// A product is consider owned if it has a receipt. If receipt validation
@@ -548,7 +548,7 @@ namespace EasyMobile
             Debug.Log("Couldn't set Apple store promotion visibility: In-App Purchasing module is not enabled.");
 #endif
         }
-        
+
         /// <summary>
         /// Sets the Apple store promotion visibility for the specified product on the current device.
         /// Call this inside the handler of the <see cref="InitializeSucceeded"/> event to set
@@ -573,7 +573,7 @@ namespace EasyMobile
             Debug.Log("Couldn't set Apple store promotion visibility: In-App Purchasing module is not enabled.");
 #endif
         }
-        
+
         /// <summary>
         /// Sets the Apple store promotion visibility for the specified product on the current device.
         /// Call this inside the handler of the <see cref="InitializeSucceeded"/> event to set
@@ -661,7 +661,7 @@ namespace EasyMobile
 
             return null;
         }
-        
+
         /// <summary>
         /// Gets the IAP product declared in module settings with the specified identifier.
         /// </summary>
@@ -1319,41 +1319,7 @@ namespace EasyMobile
 
 #if EM_UIAP
 
-        private class StoreListener : IStoreListener
-        {
-            public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
-            {
-                // Purchasing has succeeded initializing.
-                Debug.Log("In-App Purchasing OnInitialized: PASS");
-
-                // Done initializing.
-                sIsInitializing = false;
-
-                // Overall Purchasing system, configured with products for this application.
-                sStoreController = controller;
-
-                // Store specific subsystem, for accessing device-specific store features.
-                sStoreExtensionProvider = extensions;
-
-                // Get the store extensions for later use.
-                sAppleExtensions = sStoreExtensionProvider.GetExtension<IAppleExtensions>();
-                sGooglePlayStoreExtensions = sStoreExtensionProvider.GetExtension<IGooglePlayStoreExtensions>();
-                sAmazonExtensions = sStoreExtensionProvider.GetExtension<IAmazonExtensions>();
-
-                // Apple store specific setup.
-                if (sAppleExtensions != null && Application.platform == RuntimePlatform.IPhonePlayer)
-                {
-                    // Enable Ask To Buy simulation in sandbox if needed.
-                    sAppleExtensions.simulateAskToBuy = EM_Settings.InAppPurchasing.SimulateAppleAskToBuy;
-
-                    // Register a handler for Ask To Buy's deferred purchases.
-                    sAppleExtensions.RegisterPurchaseDeferredListener(OnApplePurchaseDeferred);
-                }
-
-                // Fire event
-                if (InitializeSucceeded != null)
-                    InitializeSucceeded();
-            }
+       
 
             public void OnInitializeFailed(InitializationFailureReason error)
             {
@@ -1438,205 +1404,6 @@ namespace EasyMobile
 
                 return PurchaseProcessingResult.Complete;
             }
-        }
-
-#endif
-
-        #endregion
-
-        #region Private Stuff
-
-#if EM_UIAP
-
-        /// <summary>
-        /// Raises the purchase deferred event.
-        /// Apple store only.
-        /// </summary>
-        /// <param name="product">Product.</param>
-        private static void OnApplePurchaseDeferred(Product product)
-        {
-            Debug.Log("Purchase deferred: " + product.definition.id);
-
-            if (PurchaseDeferred != null)
-                PurchaseDeferred(GetIAPProductById(product.definition.id));
-        }
-
-        /// <summary>
-        /// Raises the Apple promotional purchase event.
-        /// Apple store only.
-        /// </summary>
-        /// <param name="product">Product.</param>
-        private static void OnApplePromotionalPurchase(Product product)
-        {
-            Debug.Log("Attempted promotional purchase: " + product.definition.id);
-
-            if (PromotionalPurchaseIntercepted != null)
-                PromotionalPurchaseIntercepted(GetIAPProductById(product.definition.id));
-        }
-
-        /// <summary>
-        /// Determines if receipt validation is enabled.
-        /// </summary>
-        /// <returns><c>true</c> if is receipt validation enabled; otherwise, <c>false</c>.</returns>
-        private static bool IsReceiptValidationEnabled()
-        {
-            bool canValidateReceipt = false;    // disable receipt validation by default
-
-            if (Application.platform == RuntimePlatform.Android)
-            {
-                // On Android, receipt validation is only available for Google Play store
-                canValidateReceipt = EM_Settings.InAppPurchasing.ValidateGooglePlayReceipt;
-                canValidateReceipt &= (GetAndroidStore(EM_Settings.InAppPurchasing.TargetAndroidStore) == AndroidStore.GooglePlay);
-            }
-            else if (Application.platform == RuntimePlatform.IPhonePlayer ||
-                     Application.platform == RuntimePlatform.OSXPlayer ||
-                     Application.platform == RuntimePlatform.tvOS)
-            {
-                // Receipt validation is also available for Apple app stores
-                canValidateReceipt = EM_Settings.InAppPurchasing.ValidateAppleReceipt;
-            }
-
-            return canValidateReceipt;
-        }
-
-        /// <summary>
-        /// Validates the receipt. Works with receipts from Apple stores and Google Play store only.
-        /// Always returns true for other stores.
-        /// </summary>
-        /// <returns><c>true</c>, if the receipt is valid, <c>false</c> otherwise.</returns>
-        /// <param name="receipt">Receipt.</param>
-        /// <param name="logReceiptContent">If set to <c>true</c> log receipt content.</param>
-        private static bool ValidateReceipt(string receipt, out IPurchaseReceipt[] purchaseReceipts, bool logReceiptContent = false)
-        {
-            purchaseReceipts = new IPurchaseReceipt[0];   // default the out parameter to an empty array   
-
-            // Does the receipt has some content?
-            if (string.IsNullOrEmpty(receipt))
-            {
-                Debug.Log("Receipt Validation: receipt is null or empty.");
-                return false;
-            }
-
-            bool isValidReceipt = true; // presume validity for platforms with no receipt validation.
-                                        // Unity IAP's receipt validation is only available for Apple app stores and Google Play store.   
-#if UNITY_ANDROID || UNITY_IOS || UNITY_STANDALONE_OSX || UNITY_TVOS
-
-            byte[] googlePlayTangleData = null;
-            byte[] appleTangleData = null;
-
-            // Here we populate the secret keys for each platform.
-            // Note that the code is disabled in the editor for it to not stop the EM editor code (due to ClassNotFound error)
-            // from recreating the dummy AppleTangle and GoogleTangle classes if they were inadvertently removed.
-
-#if UNITY_ANDROID && !UNITY_EDITOR
-            googlePlayTangleData = GooglePlayTangle.Data();
-#endif
-
-#if (UNITY_IOS || UNITY_STANDALONE_OSX || UNITY_TVOS) && !UNITY_EDITOR
-            appleTangleData = AppleTangle.Data();
-#endif
-
-            // Prepare the validator with the secrets we prepared in the Editor obfuscation window.
-#if UNITY_5_6_OR_NEWER
-            var validator = new CrossPlatformValidator(googlePlayTangleData, appleTangleData, Application.identifier);
-#else
-            var validator = new CrossPlatformValidator(googlePlayTangleData, appleTangleData, Application.bundleIdentifier);
-#endif
-
-            try
-            {
-                // On Google Play, result has a single product ID.
-                // On Apple stores, receipts contain multiple products.
-                var result = validator.Validate(receipt);
-
-                // If the validation is successful, the result won't be null.
-                if (result == null)
-                {
-                    isValidReceipt = false;
-                }
-                else
-                {
-                    purchaseReceipts = result;
-
-                    // For informational purposes, we list the receipt(s)
-                    if (logReceiptContent)
-                    {
-                        Debug.Log("Receipt contents:");
-                        foreach (IPurchaseReceipt productReceipt in result)
-                        {
-                            if (productReceipt != null)
-                            {
-                                Debug.Log(productReceipt.productID);
-                                Debug.Log(productReceipt.purchaseDate);
-                                Debug.Log(productReceipt.transactionID);
-                            }
-                        }
-                    }
-                }
-            }
-            catch (IAPSecurityException)
-            {
-                isValidReceipt = false;
-            }
-#endif
-
-            return isValidReceipt;
-        }
-
-        [Obsolete("This method is mainly for checking if the product was bought with UnityIAP version 1.19+, a task not needed now.")]
-        private static bool IsProductAvailableForSubscriptionManager(string receipt)
-        {
-            var receipt_wrapper = (Dictionary<string, object>)MiniJson.JsonDecode(receipt);
-            if (!receipt_wrapper.ContainsKey("Store") || !receipt_wrapper.ContainsKey("Payload"))
-            {
-                Debug.Log("The product receipt does not contain enough information, " +
-                    "the 'Store' or 'Payload' field is missing.");
-                return false;
-            }
-
-            var store = (string)receipt_wrapper["Store"];
-            var payload = (string)receipt_wrapper["Payload"];
-
-            if (payload != null)
-            {
-                switch (store)
-                {
-                    case GooglePlay.Name:
-                        {
-                            var payload_wrapper = (Dictionary<string, object>)MiniJson.JsonDecode(payload);
-                            if (!payload_wrapper.ContainsKey("json"))
-                            {
-                                Debug.Log("The product receipt does not contain enough information, the 'json' field is missing.");
-                                return false;
-                            }
-                            var original_json_payload_wrapper = (Dictionary<string, object>)MiniJson.JsonDecode((string)payload_wrapper["json"]);
-                            if (original_json_payload_wrapper == null || !original_json_payload_wrapper.ContainsKey("developerPayload"))
-                            {
-                                Debug.Log("The product receipt does not contain enough information, the 'developerPayload' field is missing.");
-                                return false;
-                            }
-                            var developerPayloadJSON = (string)original_json_payload_wrapper["developerPayload"];
-                            var developerPayload_wrapper = (Dictionary<string, object>)MiniJson.JsonDecode(developerPayloadJSON);
-                            if (developerPayload_wrapper == null || !developerPayload_wrapper.ContainsKey("is_free_trial") || !developerPayload_wrapper.ContainsKey("has_introductory_price_trial"))
-                            {
-                                Debug.Log("The product receipt does not contain enough information, the product is not purchased using 1.19 or later.");
-                                return false;
-                            }
-                            return true;
-                        }
-                    case AppleAppStore.Name:
-                    case AmazonApps.Name:
-                    case MacAppStore.Name:
-                        {
-                            return true;
-                        }
-                    default:
-                        {
-                            return false;
-                        }
-                }
-            }
-            return false;
         }
 
 #endif
