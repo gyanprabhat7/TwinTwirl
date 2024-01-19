@@ -1,4 +1,4 @@
-# Twin Twirl 
+# Twin Twirl [DISCONTINUED]
 <p align="center">
   <img src="https://github.com/gyanprabhat7/TwinTwirl/assets/75989086/c3ae3923-5ace-4f3f-947c-7c95cb7c466f" width="200" height="200">
 </p>
